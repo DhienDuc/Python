@@ -1,0 +1,21 @@
+	Push file to Github
+	
+	1.Initialized git repository : git init
+	
+	2.Add file to repository : git add .
+	
+	3.Git commit : git commit -am "Comment"
+	
+	4.Add remote link : git remote add origin git_link
+	
+	5.Push file to github : git push origin master/brandname
+	
+	6.Switch branch : git checkout brandname/git checkout -b newbrandname
+	
+	7.Git status : git status
+	
+	---------------------------------------------------------------------------------------------------
+	
+	Clone file from Github, open termial and navigate to target folder
+	
+	1.Git clone : git clone git_link
