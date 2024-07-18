@@ -19,3 +19,20 @@
 	Clone file from Github, open termial and navigate to target folder
 	
 	1.Git clone : git clone git_link
+
+------------------------------Python---------------------------------------
+
+1.Check py version :  python --version
+
+2.Check pip version : pip --version
+
+3.Update pip version : python -m pip install --upgrade pip
+
+4.Install numpy : pip install numpy
+
+5.Install scipy : pip install scipy
+
+6.Install pandas : pip install pandas
+
+7.Install matplotlib : pip install matplotlib
+
