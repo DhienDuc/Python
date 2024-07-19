@@ -36,3 +36,5 @@
 
 7.Install matplotlib : pip install matplotlib
 
+8.Install Tkinter : pip install tk
+
