@@ -38,3 +38,5 @@
 
 8.Install Tkinter : pip install tk
 
+9.Install curses : pip install windows-curses
+
