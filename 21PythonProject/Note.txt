@@ -1,3 +1,5 @@
+	----------------------------Git--------------------
+	
 	Push file to Github
 	
 	1.Initialized git repository : git init
@@ -26,7 +28,9 @@
 
 2.Check pip version : pip --version
 
-3.Update pip version : python -m pip install --upgrade pip
+3.Update : 
++ Pip version : python -m pip install --upgrade pip
++ Tool version : pip install --upgrade setuptools wheel 
 
 4.Install numpy : pip install numpy
 
@@ -37,6 +41,9 @@
 7.Install matplotlib : pip install matplotlib
 
 8.Install Tkinter : pip install tk
+					pip install ttkbootstrap
 
 9.Install curses : pip install windows-curses
+
+10.Install playsound : pip install playsound  
 
