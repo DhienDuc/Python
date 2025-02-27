@@ -1,0 +1,6 @@
+#command to convert *.ui to *.py in terminal
+    pyside6-uic widget.ui > ui_widget.py
+#compiling the resource file to python
+    pyside6-rcc resource.qrc -o resource_rc.py
+
+#Remember to change encode to UTF-8 like other files to run programm
