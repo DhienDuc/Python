@@ -1,6 +1,6 @@
 #Import
 from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QVBoxLayout, QHBoxLayout, QLabel, QDateEdit, QTableWidget, QTableWidgetItem, QComboBox, QMessageBox
-from PySide6.QtCore import QDate
+from PySide6.QtCore import QDate, Qt
 from PySide6.QtWidgets import QHeaderView
 from PySide6.QtSql import QSqlDatabase, QSqlQuery
 import sys
@@ -30,6 +30,41 @@ class ExpenseTracker(QWidget):
         self.table.setColumnCount(5)
         self.table.setHorizontalHeaderLabels(["ID","Date","Category", "Amount", "Description"])
         self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+        #CSS styling
+        self.setStyleSheet(
+            """
+            QWidget {
+                background-color: #b8c9e1;
+            }
+            QLabel {
+                color: #333;
+                font-size: 14px;
+            }
+            QLineEdit, QComboBox, QDateEdit {
+                background-color: #b8c9e1;
+                color: #333;
+                border: 1px solid #444;
+                padding: 5px;
+            }
+            QTableWidget {
+                background-color: #b8c9e1;
+                color: #333;
+                border: 1px solid #444;
+                selection-background-color: #ddd;
+            }
+            QPushButton {
+                background-color: #4caf50;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+            QPushButton:hover {
+                background-color: #45a049;
+            }
+            """
+        )
 
         #Layout
         master_layout = QVBoxLayout()
@@ -67,6 +102,8 @@ class ExpenseTracker(QWidget):
             self.table.insertRow(row)
             for i in range(5):
                 self.table.setItem(row, i, QTableWidgetItem(str(query.value(i))))
+
+        self.table.sortByColumn(1, Qt.DescendingOrder)
 
     def add_expense(self):
         #Get data
